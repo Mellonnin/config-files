@@ -1,5 +1,5 @@
-(defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+
+(defsrc esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]   
   caps a    s    d    f    g    h    j    k    l    ;    '    \ ret
@@ -7,63 +7,44 @@
   lctl lmet lalt           spc            ralt prnt rctl
 )
 
+
 (defalias
-  ectl (tap-hold 200 200 esc lctl)
-  mctl (tap-hold 200 200 lctrl lctrl)
-  sym (tap-hold 200 200 lalt (layer-while-held symbols))
-  sym2 (tap-hold 200 200 ralt (layer-while-held symbols))
+  mctl lctrl
+  ectl (tap-hold 150 150 esc lctl)
+  msft lsft 
+  sym  (layer-toggle symbols)
+  sym2 (layer-toggle symbols)
 )
 
 (deflayer default
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab q    w    e    r    t    y    u    i    o    p    -    ]    
-  @ectl a    s    d    f    g    h    j    k    l    ;    '  \ ret
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    @msft ]    
+  @ectl a   s    d    f    g    h    j    k    l    ;    @mctl \ ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet @sym           spc            @sym2 @mctl rctl
 )
 
+
+#|
+  esc    f1    f2    f3    f4  f5  f6  f7  f8  f9  f10  f11  f12  
+  grv    1     2     3     4   5   6   7   8   9   0    -    =    bspc
+  tab    p     #     ^     $   _       '   "   !   \   lctl  ]      
+  @ectl  [     ]     {     }   -   +   (   )   %   :    lsht \    ret
+  lsft         *     =     ~       @   &   <   >   ?    rsft   
+  lctl   lmet  @sym           spc          @sym2   @mctl   rctl
+|#
+
+
+
   
-(deflayer symbols
+(deflayer symbols                                    
   esc     f1     f2     f3     f4     f5     f6      f7     f8      f9      f10    f11     f12
   grv     1      2      3      4      5      6       7      8       9       0      -       =     bspc
-  tab     S-1    ,      .      S--    S-=    S-grv   S-,    S-.     /       \      S-2     ]     
-  @ectl   S-[    S-]    [      ]      S-6    S-4     S-9    S-0     S-5     S-;    S-'     \ ret
-  lsft    ret      S-3    =      S-8    S-\    S-/     S-7    ,       .       /      rsft   
+  tab     S-\    S-3    S-6    S-4    S--    _       '      S-'     S-1     \      @mctl   ]     
+  @ectl   S-[    S-]    [      ]      -      S-=     S-9    S-0     S-5     S-;    @msft   \ ret
+  lsft    ret    S-8    =      S-grv  _      S-2     S-7    S-,     S-.     S-/    rsft   
   lctl    lmet   @sym                 spc                  @sym2   @mctl   rctl
 
 )
 
-#|
-!    ,    .    @    #    ~    <    >    /    \  
-{    }    [    ]    ^    $    (    )    %
-|    *    =    +    `    &    ?              
-    q   S-1 
-    w   ,
-    e   .
-    r   S-2
-    t   S-3
-    y   S-`
-    u   S-,
-    i   S-.
-    o   /
-    p   \
-
-    a   S-[
-    s   S-]
-    d   [ 
-    f   ]
-    g   S-6
-    h   S-4
-    j   S-9
-    k   S-0
-    l   S-5
-
-    z   S-\
-    x   S-8
-    c   =
-    v   S-=
-    b   `
-    n   S-7
-    m   S-/
-|#
