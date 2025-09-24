@@ -1,6 +1,0 @@
-
-[Default Applications]
-application/pdf=libreoffice-impress.desktop
-text=nvim.desktop
-lua/cpp/c/py=nvim.desktop
-x-scheme-handler/discord=vesktop.desktop
