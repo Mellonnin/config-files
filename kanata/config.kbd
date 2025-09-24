@@ -1,0 +1,50 @@
+
+(defsrc esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]   
+  caps a    s    d    f    g    h    j    k    l    ;    '    \ ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt prnt rctl
+)
+
+
+(defalias
+  mctl lctrl
+  ectl (tap-hold 150 150 esc lctl)
+  msft lsft 
+  sym  (layer-toggle symbols)
+  sym2 (layer-toggle symbols)
+)
+
+(deflayer default
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    @msft ]    
+  @ectl a   s    d    f    g    h    j    k    l    ;    @mctl \ ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet @sym           spc            @sym2 @mctl rctl
+)
+
+
+#|
+  esc    f1    f2    f3    f4  f5  f6  f7  f8  f9  f10  f11  f12  
+  grv    1     2     3     4   5   6   7   8   9   0    -    =    bspc
+  tab    p     #     ^     $   _       '   "   !   \   lctl  ]      
+  @ectl  [     ]     {     }   -   +   (   )   %   :    lsht \    ret
+  lsft         *     =     ~       @   &   <   >   ?    rsft   
+  lctl   lmet  @sym           spc          @sym2   @mctl   rctl
+|#
+
+
+
+  
+(deflayer symbols                                    
+  esc     f1     f2     f3     f4     f5     f6      f7     f8      f9      f10    f11     f12
+  grv     1      2      3      4      5      6       7      8       9       0      -       =     bspc
+  tab     S-\    S-3    S-6    S-4    S--    _       '      S-'     S-1     \      @mctl   ]     
+  @ectl   S-[    S-]    [      ]      -      S-=     S-9    S-0     S-5     S-;    @msft   \ ret
+  lsft    ret    S-8    =      S-grv  _      S-2     S-7    S-,     S-.     S-/    rsft   
+  lctl    lmet   @sym                 spc                  @sym2   @mctl   rctl
+
+)
+

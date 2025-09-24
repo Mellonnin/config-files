@@ -1,0 +1,6 @@
+2024/12/18-16:37:06.236 480b Reusing MANIFEST /home/Mellonnin/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2024/12/18-16:37:06.242 480b Recovering log #22
+2024/12/18-16:37:06.242 480b Reusing old log /home/Mellonnin/.config/discord/Local Storage/leveldb/000022.log 
+2024/12/18-16:41:43.154 480b Level-0 table #26: started
+2024/12/18-16:41:43.183 480b Level-0 table #26: 3299005 bytes OK
+2024/12/18-16:41:43.187 480b Delete type=0 #22
