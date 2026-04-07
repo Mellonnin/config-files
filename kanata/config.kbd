@@ -9,7 +9,7 @@
 
 
 (defalias
-  mctl lctrl
+  rwin lmet
   ectl (tap-hold 150 150 esc lctl)
   msft lsft 
   sym  (layer-toggle symbols)
@@ -22,7 +22,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    @msft ]    
   @ectl a   s    d    f    g    h    j    k    l    ;    @mctl \ ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet @sym           spc            @sym2 @mctl rctl
+  lctl lmet @sym           spc            @sym2 @rwin rctl
 )
 
 
@@ -32,7 +32,7 @@
   tab    p     #     ^     $   _       '   "   !   \   lctl  ]      
   @ectl  [     ]     {     }   -   +   (   )   %   :    lsht \    ret
   lsft         *     =     ~       @   &   <   >   ?    rsft   
-  lctl   lmet  @sym           spc          @sym2   @mctl   rctl
+  lctl   lmet  @sym           spc          @sym2   @rwin   rctl
 |#
 
 
@@ -45,7 +45,7 @@
   tab     S-\    S-3    S-6    S-4    S--    _       S-8    '       S-'     S-1    @mctl   ]     
   @ectl   S-[    S-]    [      ]      -      S-=     S-9    S-0     S-5     S-;    @msft   \ ret
   lsft    ret    \      =      S-grv  _      S-2     S-7    S-,     S-.     S-/    rsft   
-  lctl    lmet   @sym                 spc                  @sym2   @mctl   rctl
+  lctl    lmet   @sym                 spc                  @sym2   @rwin   rctl
 
 )
 
