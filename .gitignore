@@ -1,7 +1,6 @@
 *
 !hypr/
 !kanata/
-!systemd/
 !waybar
 !wofi
 !.gitignore

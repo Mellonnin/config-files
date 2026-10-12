@@ -6,20 +6,38 @@
   lctl lmet lalt           spc            ralt prnt rctl
 )
 
+(defcfg
+  danger-enable-cmd yes
+)
 
 (defalias
   mmet lmet
+  mesc esc
   mctl lctrl
-  ectl (tap-hold 150 150 esc lctl)
+  ectl (tap-hold 130 130 esc lctl)
   msft lsft 
   sym  (layer-toggle symbols)
   sym2 (layer-toggle symbols)
+
+  tht  (cmd wtype Θ)
+  omg  (cmd wtype Ω)
+  and  (cmd wtype ∧)
+  or   (cmd wtype ∨)
+  app  (cmd wtype ∈)
+  fal  (cmd wtype ∀)
+  exi  (cmd wtype ∃)
+  uni  (cmd wtype ∪)
+  int  (cmd wtype ∩)
+  sub  (cmd wtype ⊂)
+  sube (cmd wtype ⊆)
+  lmb  (cmd wtype λ)
+  ept  (cmd wtype Ø)
 )
 
 (deflayer default
   esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12
-  grv   1    2    3    4    5    6    7    8    9    0    -     =    bspc
-  tab   q    w    e    r    t    y    u    i    o    p    @msft ]    
+  grv   1    2    3    4    5    6    7    8    9    0    _     _    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    @msft @mesc
   @ectl a    s    d    f    g    h    j    k    l    ;    @mctl \ ret
   lsft  z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet @sym           spc            @sym2 @mmet rctl
@@ -28,21 +46,23 @@
 
 #|
   esc    f1    f2    f3    f4  f5  f6  f7  f8  f9  f10  f11  f12  
-  grv    1     2     3     4   5   6   7   8   9   0    -    =    bspc
-  tab          '     *     ^   |   `   $   #   "   \    lctl  ]      
+  λ      Θ     Ω     ∧     ∨   ∈   ∀   ∃   ∪   ∩   ⊂    ⊆    _    bspc
+  €      Ø     *     '     ^   |   $   `   "   #   \    lctl @mesc
   @ectl  %     {     [     (   -   +   )   ]   }   :    lsht \    ret
-  lsft   €     ~     =     !   &   @   _   <   >   ?    rsft   
+  lsft   ¬     ~     !     =   &   @   _   <   >   ?    rsft   
   lctl   lmet  @sym           spc          @sym2   @mmet   rctl
+
+
+
+
 |#
  
 
-
 (deflayer symbols                                  
   esc     f1     f2     f3     f4     f5     f6      f7     f8      f9      f10    f11     f12
-  grv     1      2      3      4      5      6       7      8       9       0      -       =     bspc
-  tab     _      '      S-8    S-6    S-\    `       S-4    S-3     S-'     \      @mctl   ]     
-  @ectl   S-5    S-[    [      S-9    -      S-=     S-0    ]       S-]     S-;    @msft   \ ret
-  lsft    RA-5   S-grv  =      S-1    S-7    S-2     S--    S-,     S-.     S-/    rsft   
-  lctl    lmet   @sym                 spc                  @sym2   @mmet   rctl
+  @lmb    @tht   @omg   @and   @or    @app   @fal    @exi   @uni    @int    @sub   @sube    _     bspc
+  RA-5    @ept   S-8    '      S-6    S-\    S-4     `      S-'     S-3     \      @msft   @mesc
+  @ectl   S-5    S-[    [      S-9    -      S-=     S-0    ]       S-]     S-;    @mctl   _ ret
+  lsft    RA-\   S-grv  S-1    =      S-7    S-2     S--    S-,     S-.     S-/    rsft   
+  lctl    lmet   @sym                 spc                   @sym2   @mmet   rctl
 )
-
