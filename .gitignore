@@ -1,6 +1,7 @@
 *
 !hypr/
 !kanata/
-!waybar
-!wofi
-!.gitignore
+!waybar/
+!wofi/
+# !.gitignore
+!tmux-sessionizer/

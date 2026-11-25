@@ -7,9 +7,6 @@
 }
 
 
-window {
-	/*font-weight: bold;*/
-}
 window#waybar {
     background: rgba(0, 0, 0, 0);
 }
@@ -30,27 +27,22 @@ window#waybar {
 /*-----modules indv----*/
 #workspaces {
     padding: 1px 5px;
-    /* background-color: transparent; */
     background-color: rgba(0,43,51,0.85);
     border-radius: 8px;
 }
 #workspaces button {
     padding: 1px 5px;
     background-color: transparent;
-    /* background-color: rgba(0,43,51,0.85); */
 }
 #workspaces button:hover {
     box-shadow: inherit;
-    /* background-color: transparent; */
     background-color: rgba(0,153,153,1);
     border-radius: 0px;
 }
 #workspaces button.focused {
     background-color: transparent;
-    /* background-color: rgba(0,43,51,0.85); */
 }
 #workspaces button.active{
-    /* background-color: transparent; */
     background-color: rgba(0,43,51,1);
     border-radius: 0px;
 }
@@ -64,13 +56,15 @@ window#waybar {
 #network,
 #pulseaudio,
 #custom-media,
-#tray,
+#tray
 #mode,
 #custom-power,
 #custom-menu,
+
 #idle_inhibitor {
     padding: 0 10px;
 }
+
 #mode {
     color: #cc3436;
     font-weight: bold;
@@ -81,12 +75,10 @@ window#waybar {
     margin: 5px 5px;
     padding: 1px 3px;
 }
+
 /*-----Indicators----*/
 #idle_inhibitor.activated {
     color: #2dcc36;
-}
-#pulseaudio.muted {
-    color: #cc3436;
 }
 #battery.charging {
     color: #2dcc36;
